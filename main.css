@@ -1,0 +1,116 @@
+/* --------------------- Created By InCoder --------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 85%);
+}
+
+.checkerContainer {
+  width: 25rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.6rem;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(0 0 0 / 35%);
+  box-shadow: 0 0 20px rgb(76 76 76 / 33%);
+}
+
+.checkerContainer .title {
+  color: #ccc;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.checkerContainer .form-group {
+  height: 2.6rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 4rem);
+}
+
+.checkerContainer .form-group #passwordChecker {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  margin-top: 0.2rem;
+  color: #ccccccbd;
+  position: relative;
+  letter-spacing: 1px;
+  border-radius: 0.4rem;
+  background: transparent;
+  border: 3px solid #3b3b3b;
+  transition: background 0.19s ease-in-out;
+}
+
+.checkerContainer .form-group::before {
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  padding: 0 4px;
+  font-size: 14px;
+  user-select: none;
+  color: #ccccccbd;
+  position: absolute;
+  pointer-events: none;
+  content: attr(data-placeholder);
+  transform: translate(15%, -50%);
+  transition: transform .2s ease-in-out;
+}
+
+.checkerContainer .form-group.focus::before {
+    background: #191919;
+    transform: translate(15%, -130%);
+}
+
+.checkerContainer .form-group #passwordChecker:focus label {
+  color: #fff;
+}
+
+.checkerContainer .form-group #passwordChecker.error {
+  outline-offset: 1px;
+  color: rgb(239, 68, 68);
+  outline: 2px solid rgb(239, 68, 68);
+}
+
+.checkerContainer .message.error {
+  color: rgb(239, 68, 68) !important;
+}
+
+.checkerContainer .form-group #passwordChecker.success {
+  outline-offset: 1px;
+  color: rgb(34, 197, 94);
+  outline: 2px solid rgb(34, 197, 94);
+}
+
+.checkerContainer .message.success {
+  color: rgb(34, 197, 94) !important;
+}
+
+.checkerContainer .form-group input:focus {
+  background: #4f4b4b;
+}
+
+.checkerContainer .message {
+  margin-top: 0.4rem;
+  color: #ccccccbd;
+  margin-bottom: 0.8rem;
+}
